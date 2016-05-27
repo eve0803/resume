@@ -1,0 +1,40 @@
+
+#resume{   width: 1000px; overflow: hidden;  background: $color-white;
+  margin: 0 auto; box-shadow: 0 0 5px 5px #ccc;
+}
+header{ padding:0 20px;  height: 180px;
+  background:$color-main;    color:$color-white; overflow: hidden;
+  .web-links{margin-top: 10px;
+    .icon{ width: 20px;
+      font-size:24px;
+      color:$color-white; position: absolute;top:0;left:-35px;
+      transition: font-size 0.25s ease-out 0s;
+    }
+    a{color: $color-white; height: 30px;    display: block; text-decoration: none; line-height: 35px; position: relative;;
+      &:hover  .icon{ font-size:30px;color:lightcoral; }
+    }
+  }
+  .person {  text-align: center;  width:200px ;
+    h2{ font-size:50px;margin: 40px 0px 10px; }
+    p{font-size:$fontSize18; }
+  }
+}
+.item{padding:10px 20px;
+  li{padding:  0 20px;border-left: 1px solid #e1e1e1; box-sizing: border-box;position: relative; line-height:24px;
+    .circtle{width: 6px;height:6px; display:inline-block;background: $color-black; border-radius: 50%; position: relative; left:-23px;top:20px;}
+  }
+  h4{ font-size: 14px; color: $color-black;}
+  .time{font-weight: bold; color: #666; margin-left: 20px}
+  p.text{text-indent: 2em;}
+}
+.item   h3{font-size:$fontSize18; position: relative; color: #277baf;
+  i{ display:inline-block;position: relative; left:-8px;
+  }
+}
+
+.downLoad{ position: fixed;right: 0;top:200px;
+  a{ display: block;width: 100px;height: 50px;font-size:$fontSize16;color: #fff;background:$color-main;line-height:50px; margin-top: 10px; border-radius: 10px 0px 10px 0px; text-align: center;
+    &:hover{background: #666}
+
+  }
+}
