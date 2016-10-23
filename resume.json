@@ -1,4 +1,4 @@
-{
+﻿{
   "data_lang": "zh-CN",
   "resume_title": "郭丽敏 - 个人简历",
   "myname": "郭丽敏",
@@ -9,7 +9,7 @@
   "github": "https://github.com/eve0803",
   "blog": "http://www.cnblogs.com/eveblog/" ,
   "repo": "https://github.com/eve0803/resume",
-  "case": "http://www.guoeve.com/web/html/my-resume/index.html",
+  "case": "http://eve0803.github.io/resume/my-resume/index.html",
   "pdf": "http://eve0803.github.io/resume/static/eve-resume.pdf",
   "contain": [
     {

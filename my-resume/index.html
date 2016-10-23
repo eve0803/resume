@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人案例展示</title>
+    <style>
+        body{background: #fff;padding-top: 50px;}
+        a{ text-decoration: none;}
+        #box{width:100%;margin:0px auto;  display: flex;  }
+        #box ul{ display: flex;flex-direction: row;flex-wrap: wrap;justify-content:  center;}
+        #box li{ width:220px; height: 300px; overflow: hidden; box-shadow: 0 0 5px 5px #e1e1e1; list-style: none;position: relative;  text-align: center; vertical-align: middle ;cursor: pointer;margin: 15px; border-radius:30px;  }
+        .box2{position: absolute;left: -100%;top: -100%;width: 70%;padding:0 15%;height: 100%;background:rgba(0,0,0,0.5);text-align: center;color: #fff;    }
+        #box li img{ width: 100%;vertical-align: middle; }
+        .box2 .imgWrap{ margin: 70px 0 20px;}
+        .box2 a{ color: #fff; display: block;}
+        #box li.text{line-height: 300px;}
+        header{width: 100%;height:50px;line-height: 50px; background: #000; color: #fff;text-indent: 20px; position: fixed;top:0;left: 0}
+        header a{padding: 0 20px; color:gold; font-size: 20px; }
+    </style>
+</head>
+<body>
+<header>个人案例部分展示 <a href="https://github.com/eve0803"> github地址</a></header>
+<div id="box">
+    <ul>
+    <li>
+        <img src="images/case/chepai1.png">
+    <div class="box2">
+        <p class="imgWrap"><img src="images/case/chepai.png"></p>
+        <p>扫一扫，观看效果</p>
+    </div>
+    </li>
+        <li>
+            <img src="images/case/hf1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/hf.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/case/shui1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/shui.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/case/xjt1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/xjt.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/case/xu1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/xu.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/case/yrj1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/yrj.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/case/yue1.png">
+            <div class="box2">
+                <p class="imgWrap"><img src="images/case/yue.png"></p>
+                <p>扫一扫，观看效果</p>
+            </div>
+        </li>
+        <li class="text">
+            <img src="images/case/baidu.jpg">
+            <div class="box2">
+                <p><a href="https://github.com/eve0803/ifetask/">点击打开链接</a> </p>
+            </div>
+        </li>
+        <li class="text">
+            EQury
+            <div class="box2">
+                <p><a href="https://github.com/eve0803/js-unit">点击打开链接</a> </p>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    $(function() {
+        $("#box li").each(function(){
+            $(this).on("mouseenter mouseleave",function(e) {
+                var w = $(this).width();
+                var h = $(this).height();
+                var x=(e.pageX-this.offsetLeft-(w/2))*(w>h?(h/w):1);
+                var y=(e.pageY-this.offsetTop-(h/2))*(h>w?(w/h):1);
+                var dirNum=Math.round((((Math.atan2(y,x)*(180/Math.PI))+180)/90)+3)%4;
+                var eventType = e.type;
+                var aPos=[{left:0,top:-h},{left:w,top:0},{left:0,top:h},{left:-w,top:0}];
+                if(eventType == 'mouseenter'){
+                    $(this).find(".box2").css(aPos[dirNum]).stop(true,true).animate({left:0,top:0},200);
+                }else{
+                    $(this).find(".box2").stop(true,true).animate(aPos[dirNum],200);
+                }
+            });
+        })
+
+    });
+</script>
+</body>
+</html> 
